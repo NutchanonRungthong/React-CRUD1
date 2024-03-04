@@ -30,7 +30,7 @@ export default function BookList() {
 
   useEffect(() => {
     axios
-      .get("https://node41091-noderest.proen.app.ruk-com.cloud/books")
+      .get("http://node56373-noderesza.proen.app.ruk-com.cloud:11567/books")
       .then((response) => {
         setBooks(response.data);
       });
@@ -38,7 +38,7 @@ export default function BookList() {
 
   const viewBook = (id) => {
     axios
-      .get(`https://node41091-noderest.proen.app.ruk-com.cloud/books/${id}`)
+      .get(`http://node56373-noderesza.proen.app.ruk-com.cloud:11567/books/${id}`)
       .then((response) => {
         setBook(response.data);
       });
@@ -57,7 +57,7 @@ export default function BookList() {
 
   const deleteBook = (id) => {
     axios
-      .delete(`https://node41091-noderest.proen.app.ruk-com.cloud/books/${id}`)
+      .delete(`http://node56373-noderesza.proen.app.ruk-com.cloud:11567/books/${id}`)
       .then(() => {
         setBooks(books.filter((book) => book.id !== id));
       });
